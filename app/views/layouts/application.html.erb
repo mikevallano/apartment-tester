@@ -8,8 +8,8 @@
 </head>
 <body>
 
-<%= link_to "Sign out", destroy_user_session_path, :method => "delete" %> | <%= link_to "Sign In", "/users/sign_in" %> |
-<%= link_to "Sign Up", '/users/sign_up' %> | Signed in as: <%= current_user.email if current_user.present? %>
+<%= link_to "Sign out", "http://localhost:3000/users/sign_out", :method => "delete" %> | <%= link_to "Sign In", "http://localhost:3000/users/sign_in" %> |
+<%= link_to "Sign Up", 'http://localhost:3000/users/sign_up' %> | Signed in as: <%= current_user.email if current_user.present? %>
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
