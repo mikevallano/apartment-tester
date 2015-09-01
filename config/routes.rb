@@ -16,7 +16,6 @@ Rails.application.routes.draw do
 
   # resources :posts
   constraints SubdomainBlank do
-    devise_for :users
     resources :accounts
     resources :roles
     root 'pages#home'
@@ -24,6 +23,7 @@ Rails.application.routes.draw do
   end
 
   constraints SubdomainConstriant do
+    devise_for :users
     root 'posts#index', as: :subdomain_root
     resources :posts
   end
